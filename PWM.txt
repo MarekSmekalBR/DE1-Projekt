@@ -1,0 +1,18 @@
+co potrebujeme
+1. vstupy vystupy
+     1.1 vstupy
+	BTNC - RST
+	BTNL - snizeni jasu
+	BTNR - zvyseni jasu	
+	SW1 - rizeni 1. LED
+	SW2 - rizeni 2. LED
+	SW3 - rizeni obou
+	CLK100MHZ - clock
+     1.2 vystupy
+	6x 7seg - ca az cg
+	PWM_Out - 2bit na (2 vystupy na LEDky)
+
+2. kontroler
+	2.1 clock na kontroler
+	2.2 generovani pozic zacatek 0 a ovladani L/R a rst nastavi 0
+	2.3 prevod binarniho na bcd pro ovladani 7 segmentovek
