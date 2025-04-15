@@ -21,7 +21,7 @@ Například při 50% pracovním cyklu je signál polovinu času v logické jedni
 ## Popis hardwaru a demo aplikace
 Projekt je implementován na vývojové desce Nexys A7-50T od firmy Digilent, která obsahuje FPGA čip Xilinx Artix-7. Deska nabízí různé vstupně-výstupní prvky, které byly v rámci projektu využity pro realizaci ovládání LED diod a vizualizaci dat.
 
-Využité hardwarové prvky:
+<ins>Využité hardwarové prvky:<ins>
 
 LED0 a LED1 – výstupní LED diody řízené pomocí PWM
 
@@ -33,7 +33,7 @@ BTNC (Center Button) – slouží jako reset celého systému, vrací hodnoty du
 
 6-místný sedmisegmentový displej – zobrazení aktuálního jasu vybrané LED v procentech, rozděleno po třech místech pro každou LED
 
-Další využité prostředky:
+<ins>Další využité prostředky:<ins>
 
 Interní 100 MHz hodinový signál – zdroj hodin pro systém
 
@@ -42,7 +42,7 @@ Dělička hodin (clock divider) – pro zpomalení signálu na vhodnou frekvenci
 ## Popis softwaru
 Projekt byl vytvořen v prostředí Vivado v jazyce VHDL. Návrh je rozdělen do několika modulárních komponent, které spolu komunikují prostřednictvím signálů.
 
-Hlavní moduly:
+<ins>Hlavní moduly:<ins>
 
 Clock Divider – převádí 100 MHz vstupní hodiny na pomalejší frekvenci vhodnou pro čítání a generování PWM
 
