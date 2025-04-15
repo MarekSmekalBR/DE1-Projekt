@@ -23,36 +23,36 @@ Projekt je implementován na vývojové desce Nexys A7-50T od firmy Digilent, kt
 
 Využité hardwarové prvky:
 
-LED0 a LED1 – výstupní LED diody řízené pomocí PWM.
+LED0 a LED1 – výstupní LED diody řízené pomocí PWM
 
-SW0–SW2 – přepínače pro výběr kanálu (LED0, LED1, obě zároveň).
+SW0–SW2 – přepínače pro výběr kanálu (LED0, LED1, obě zároveň)
 
-BTN_LEFT a BTN_RIGHT – tlačítka pro nastavování jasu po 10 % (snížení / zvýšení).
+BTNL (Left) a BTNR (Right) – tlačítka pro nastavování jasu po 10 % (snížení / zvýšení)
 
-4-místný sedmisegmentový displej (7-segment display) – zobrazení aktuálního jasu vybrané LED v procentech, rozděleno po dvou místech pro každou LED.
+BTNC (Center Button) – slouží jako reset celého systému, vrací hodnoty duty cycle obou LED na výchozí hodnotu (např. 0 %)
+
+6-místný sedmisegmentový displej – zobrazení aktuálního jasu vybrané LED v procentech, rozděleno po třech místech pro každou LED
 
 Další využité prostředky:
 
-Interní 100 MHz hodinový signál – zdroj hodin pro systém.
+Interní 100 MHz hodinový signál – zdroj hodin pro systém
 
-Dělička hodin (clock divider) – pro zpomalení signálu na vhodnou frekvenci pro PWM a logiku řízení.
+Dělička hodin (clock divider) – pro zpomalení signálu na vhodnou frekvenci pro PWM a logiku řízení
 
 ## Popis softwaru
 Projekt byl vytvořen v prostředí Vivado v jazyce VHDL. Návrh je rozdělen do několika modulárních komponent, které spolu komunikují prostřednictvím signálů.
 
 Hlavní moduly:
 
-Clock Divider – převádí 100 MHz vstupní hodiny na pomalejší frekvenci vhodnou pro čítání a generování PWM (např. 1 kHz).
+Clock Divider – převádí 100 MHz vstupní hodiny na pomalejší frekvenci vhodnou pro čítání a generování PWM
 
-PWM Generátor (2x) – každý generátor vytváří signál s nastavitelným pracovním cyklem, který určuje jas LED.
+PWM Generátor (2x) – každý generátor vytváří signál s nastavitelným pracovním cyklem, který určuje jas LED
 
-Řízení vstupů (Input Control) – zpracovává stavy přepínačů a tlačítek, určuje aktivní kanál a aktualizuje hodnotu duty cycle.
+Řízení vstupů (Input Control) – zpracovává stavy přepínačů a tlačítek, určuje aktivní kanál a aktualizuje hodnotu duty cycle
 
-Segmentový displej (7-Segment Display Driver) – zobrazuje hodnoty duty cycle ve formátu procent (např. 070).
+Segmentový displej (7-Segment Display Driver) – zobrazuje hodnoty duty cycle ve formátu procent
 
-Top-level entita – propojuje všechny komponenty, určuje směr a logiku signálů.
-
-Všechny moduly byly simulovány a testovány samostatně před integrací do celku. Výsledný návrh je syntetizovatelný a připraven pro implementaci na FPGA.
+Top-level entita – propojuje všechny komponenty, určuje směr a logiku signálů
 
 ### Zapojení
 
