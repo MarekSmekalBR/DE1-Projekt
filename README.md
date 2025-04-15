@@ -23,8 +23,11 @@ Tato metoda je velmi efektivní, protože nezpůsobuje ztráty v podobě tepla j
 ## Popis softwaru
 ### Zapojení
 
+### Top Level
+
 ### Simulace komponentů
 
 ## Instrukce
 
 ## Reference
+https://vhdl.lapinoo.net/
