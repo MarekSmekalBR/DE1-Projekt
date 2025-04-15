@@ -28,5 +28,5 @@ Například při 50% pracovním cyklu je signál polovinu času v logické jedni
 ## Instrukce
 
 ## Reference
-[Online VHDL Testbench Template Generator](https://vhdl.lapinoo.net/)
+1. [Online VHDL Testbench Template Generator](https://vhdl.lapinoo.net/)
 
