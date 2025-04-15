@@ -30,4 +30,4 @@ Tato metoda je velmi efektivní, protože nezpůsobuje ztráty v podobě tepla j
 ## Instrukce
 
 ## Reference
-Online VHDL Testbench Template Generator https://vhdl.lapinoo.net/
+Online VHDL Testbench Template Generator: https://vhdl.lapinoo.net/
