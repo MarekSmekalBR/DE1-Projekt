@@ -1,11 +1,11 @@
 # **DE1-Projekt**
-Jan Veverka zodpovědný za programování 
+Jan Veverka: Zodpovědný za programování 
   
-Vojtěch Vičar zodpovědný za programování 
+Vojtěch Vičar: Zodpovědný za programování 
   
-Marek Smékal zodpovědný za vytváření README souboru a pomoc s programováním 
+Marek Smékal: Zodpovědný za vytváření README souboru a pomoc s programováním 
   
-Matěj Rýdel zodpovědný za vytváření README souboru a pomoc s programováním
+Matěj Rýdel: Zodpovědný za vytváření README souboru a pomoc s programováním
 
 ## Teoretický úvod
 Náš projekt je zaměřen na návrh a implementaci PWM (Pulse Width Modulation) v jazyce VHDL na vývojové desce Nexys A7-50T. Cílem je řízení jasu dvou LED diod pomocí nezávislých PWM kanálů. Uživatel vybírá, která LED má být ovládána, prostřednictvím tří přepínačů: první přepínač slouží pro ovládání první LED, druhý pro druhou LED a třetí pro současné řízení obou. Jas LED je nastavován pomocí dvou tlačítek – jedno slouží ke zvýšení intenzity o 10 %, druhé k jejímu snížení.
