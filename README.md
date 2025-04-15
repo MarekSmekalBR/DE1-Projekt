@@ -16,3 +16,4 @@ Náš projekt je zaměřen na návrh a implementaci PWM (Pulse Width Modulation)
 
 ## Popis softwaru
 
+### Zapojení
