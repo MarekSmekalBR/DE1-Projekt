@@ -1,4 +1,4 @@
-# DE1-Projekt
+# **DE1-Projekt**
 Jan Veverka zodpovědný za programování 
   
 Vojtěch Vičar zodpovědný za programování 
