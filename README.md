@@ -1,4 +1,5 @@
 # **DE1-Projekt**
+## **Členové**
 Jan Veverka: Zodpovědný za programování 
   
 Vojtěch Vičar: Zodpovědný za programování 
