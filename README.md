@@ -62,6 +62,7 @@ Top-level entita – propojuje všechny komponenty, určuje směr a logiku sign�
 
 ### Simulace komponentů
 <ins>**CLK100MHz**<ins>  
+
 Komponenta clock_en_100MHz generuje výstupní puls pulse s periodou nastavitelnou pomocí parametru n_periods. Každý n_periods-tý takt hodinového signálu clk je pulse nastaven na '1'. Komponenta je resetována vstupem rst. Slouží jako dělička hodin, například pro zpomalení řízení nebo časování dalších částí návrhu.
 ![image](https://github.com/user-attachments/assets/5855c609-5462-46cf-8999-8a8ba929a9c9)
 
