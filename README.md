@@ -63,19 +63,19 @@ Top-level entita – propojuje všechny komponenty, určuje směr a logiku sign�
 ### Simulace komponentů
 <ins>**CLK100MHz**<ins>  
 
-Komponenta * *clock_en_100MHz* * generuje výstupní puls * *pulse* * s periodou nastavitelnou pomocí parametru * *n_periods* *. Každý * *n_periods* *-tý takt hodinového signálu * *clk* * je * *pulse* * nastaven na '1'. Komponenta je resetována vstupem * *rst* *. Slouží jako dělička hodin, například pro zpomalení řízení nebo časování dalších částí návrhu.
+Komponenta *clock_en_100MHz* generuje výstupní puls *pulse* s periodou nastavitelnou pomocí parametru *n_periods*. Každý *n_periods*-tý takt hodinového signálu *clk* je *pulse* nastaven na '1'. Komponenta je resetována vstupem *rst*. Slouží jako dělička hodin, například pro zpomalení řízení nebo časování dalších částí návrhu.
 
 ![image](https://github.com/user-attachments/assets/5855c609-5462-46cf-8999-8a8ba929a9c9)
 
 <ins>**CLK20Hz**<ins>
 
-Komponenta * *clock_en_20Hz* * slouží k vytváření krátkých pulzů s frekvencí 20 Hz. Pulz * *pulse* * je aktivní jeden takt hodinového signálu * *clk* *, a opakuje se každých * *n_periods taktů* *. Vstup * *rst* * resetuje vnitřní čítač. Komponenta funguje jako dělička hodinového signálu z 100 MHz na 20 Hz a může být použita k časování pomalejších procesů, jako je čtení tlačítek nebo změna jasu LED.
+Komponenta *clock_en_20Hz* slouží k vytváření krátkých pulzů s frekvencí 20 Hz. Pulz *pulse* je aktivní jeden takt hodinového signálu *clk*, a opakuje se každých *n_periods taktů*. Vstup *rst* resetuje vnitřní čítač. Komponenta funguje jako dělička hodinového signálu z 100 MHz na 20 Hz a může být použita k časování pomalejších procesů, jako je čtení tlačítek nebo změna jasu LED.
 
 ![image](https://github.com/user-attachments/assets/ba2d61d3-ba38-4a36-9c4a-53828a341a0a)
 
 <ins>**Luminosity**<ins>  
 
-Komponenta luminosity slouží k řízení hodnoty intenzity světla v rozsahu 0–100 %. Na základě stisků tlačítek high a low zvyšuje nebo snižuje vnitřní čítač po krocích 10. Hodnota je aktualizována pouze tehdy, pokud je aktivní signál en a zároveň change_en. Tlačítko rst provede reset čítače na nulu. Pokud jsou obě tlačítka stisknuta současně, hodnota se nemění. Výstupní signál lum obsahuje aktuální intenzitu v osmibitovém formátu.
+Komponenta *luminosity* slouží k řízení hodnoty intenzity světla v rozsahu 0–100 %. Na základě stisků tlačítek *high* a *low* zvyšuje nebo snižuje vnitřní čítač po krocích 10. Hodnota je aktualizována pouze tehdy, pokud je aktivní signál *en* a zároveň *change_en*. Tlačítko *rst* provede reset čítače na nulu. Pokud jsou obě tlačítka stisknuta současně, hodnota se nemění. Výstupní signál *lum* obsahuje aktuální intenzitu v osmibitovém formátu.
 
 ![image](https://github.com/user-attachments/assets/3b60fa7b-57da-42c8-afad-159e59e96bfb)
 
