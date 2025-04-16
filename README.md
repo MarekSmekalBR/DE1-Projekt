@@ -59,6 +59,7 @@ Top-level entita – propojuje všechny komponenty, určuje směr a logiku sign�
 ### Top Level
 
 ### Simulace komponentů
+![image](https://github.com/user-attachments/assets/5855c609-5462-46cf-8999-8a8ba929a9c9)
 
 ## Instrukce
 
