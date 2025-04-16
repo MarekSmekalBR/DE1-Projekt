@@ -59,7 +59,11 @@ Top-level entita – propojuje všechny komponenty, určuje směr a logiku sign�
 ### Top Level
 
 ### Simulace komponentů
+CLK100MHz  
 ![image](https://github.com/user-attachments/assets/5855c609-5462-46cf-8999-8a8ba929a9c9)
+
+CLK20Hz  
+![image](https://github.com/user-attachments/assets/ba2d61d3-ba38-4a36-9c4a-53828a341a0a)
 
 ## Instrukce
 
