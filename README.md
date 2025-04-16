@@ -39,6 +39,8 @@ Interní 100 MHz hodinový signál – zdroj hodin pro systém
 
 Dělička hodin (clock divider) – pro zpomalení signálu na vhodnou frekvenci pro PWM a logiku řízení
 
+![image](https://github.com/user-attachments/assets/1fa2566f-5888-4dca-b762-d699d41f3add)
+
 ## Popis softwaru
 Projekt byl vytvořen v prostředí Vivado v jazyce VHDL. Návrh je rozdělen do několika modulárních komponent, které spolu komunikují prostřednictvím signálů.
 
@@ -60,21 +62,27 @@ Top-level entita – propojuje všechny komponenty, určuje směr a logiku sign�
 
 ### Simulace komponentů
 CLK100MHz  
+
 ![image](https://github.com/user-attachments/assets/5855c609-5462-46cf-8999-8a8ba929a9c9)
 
 CLK20Hz  
+
 ![image](https://github.com/user-attachments/assets/ba2d61d3-ba38-4a36-9c4a-53828a341a0a)
 
 Luminosity  
+
 ![image](https://github.com/user-attachments/assets/3b60fa7b-57da-42c8-afad-159e59e96bfb)
 
 PWM  
+
 ![image](https://github.com/user-attachments/assets/e55e5a58-f3e8-4b60-b080-04a394fde615)
 
 Seg_bcd_d  
+
 ![image](https://github.com/user-attachments/assets/893d600c-1da9-404e-8757-2ede3ee9e6b6)
 
 Bin2bcd
+
 ![image](https://github.com/user-attachments/assets/94b8e407-5999-44fb-be5d-33b7c0ba2fa6)
 
 ## Instrukce
