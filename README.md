@@ -61,27 +61,27 @@ Top-level entita – propojuje všechny komponenty, určuje směr a logiku sign�
 ### Top Level
 
 ### Simulace komponentů
-**CLK100MHz**  
+<ins>**CLK100MHz**<ins>  
 Komponenta clock_en_100MHz generuje výstupní puls pulse s periodou nastavitelnou pomocí parametru n_periods. Každý n_periods-tý takt hodinového signálu clk je pulse nastaven na '1'. Komponenta je resetována vstupem rst. Slouží jako dělička hodin, například pro zpomalení řízení nebo časování dalších částí návrhu.
 ![image](https://github.com/user-attachments/assets/5855c609-5462-46cf-8999-8a8ba929a9c9)
 
-**CLK20Hz**
+<ins>**CLK20Hz**<ins>
 
 ![image](https://github.com/user-attachments/assets/ba2d61d3-ba38-4a36-9c4a-53828a341a0a)
 
-**Luminosity**  
+<ins>**Luminosity**<ins>  
 
 ![image](https://github.com/user-attachments/assets/3b60fa7b-57da-42c8-afad-159e59e96bfb)
 
-**PWM**  
+<ins>**PWM**<ins> 
 
 ![image](https://github.com/user-attachments/assets/e55e5a58-f3e8-4b60-b080-04a394fde615)
 
-**Seg_bcd_d**  
+<ins>**Seg_bcd_d**<ins>  
 
 ![image](https://github.com/user-attachments/assets/893d600c-1da9-404e-8757-2ede3ee9e6b6)
 
-**Bin2bcd**
+<ins>**Bin2bcd**<ins>
 
 ![image](https://github.com/user-attachments/assets/94b8e407-5999-44fb-be5d-33b7c0ba2fa6)
 
