@@ -65,6 +65,12 @@ CLK100MHz
 CLK20Hz  
 ![image](https://github.com/user-attachments/assets/ba2d61d3-ba38-4a36-9c4a-53828a341a0a)
 
+Luminosity  
+![image](https://github.com/user-attachments/assets/3b60fa7b-57da-42c8-afad-159e59e96bfb)
+
+PWM  
+![image](https://github.com/user-attachments/assets/e55e5a58-f3e8-4b60-b080-04a394fde615)
+
 ## Instrukce
 
 ## Reference
