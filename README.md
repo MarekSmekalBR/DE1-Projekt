@@ -87,7 +87,7 @@ Komponenta *PWM_gen* generuje PWM signál na základě vstupní hodnoty *lum*, k
 
 <ins>**Seg_bcd_d**<ins>  
 
-Komponenta seg_bcd_d převádí 4bitové binární číslo na odpovídající výstup pro sedmisegmentový displej (segments a–g). Vstup bin reprezentuje číslici 0–9, která je dekódována do sedmisegmentového výstupu seg. Pokud je aktivní signál clear, všechny segmenty se vypnou (seg <= "1111111"). Tím je možné jednotlivé číslice na displeji jednoduše zobrazovat nebo mazat.
+Komponenta *seg_bcd_d* převádí 4bitové binární číslo na odpovídající výstup pro sedmisegmentový displej (segments a–g). Vstup *bin* reprezentuje číslici 0–9, která je dekódována do sedmisegmentového výstupu *seg*. Pokud je aktivní signál *clear*, všechny segmenty se vypnou (*seg <= "1111111"*). Tím je možné jednotlivé číslice na displeji jednoduše zobrazovat nebo mazat.
 
 ![image](https://github.com/user-attachments/assets/893d600c-1da9-404e-8757-2ede3ee9e6b6)
 
