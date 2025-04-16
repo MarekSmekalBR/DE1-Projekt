@@ -48,9 +48,9 @@ Clock Divider – převádí 100 MHz vstupní hodiny na pomalejší frekvenci vh
 
 PWM Generátor (2x) – každý generátor vytváří signál s nastavitelným pracovním cyklem, který určuje jas LED
 
-Řízení vstupů (Input Control) – zpracovává stavy přepínačů a tlačítek, určuje aktivní kanál a aktualizuje hodnotu duty cycle
+Řízení vstupů – zpracovává stavy přepínačů a tlačítek, určuje aktivní kanál a aktualizuje hodnotu duty cycle
 
-Segmentový displej (7-Segment Display Driver) – zobrazuje hodnoty duty cycle ve formátu procent
+Segmentový displej – zobrazuje hodnoty duty cycle ve formátu procent
 
 Top-level entita – propojuje všechny komponenty, určuje směr a logiku signálů
 
