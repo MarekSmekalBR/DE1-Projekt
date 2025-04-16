@@ -29,7 +29,7 @@ begin
 
   dut : component clock_en_20Hz
     generic map (
-      n_periods => 5_000_000  -- 100MHz / 20Hz 
+      n_periods => 5000000  -- 100MHz / 20Hz 
     )
     port map (
       clk   => clk,

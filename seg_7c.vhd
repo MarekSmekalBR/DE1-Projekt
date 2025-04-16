@@ -108,5 +108,6 @@ begin
           SEG8(0);
           
     DP <= '1';
-    AN <= sig_an; 
+    AN <= sig_an;
+     
 end Behavioral;
