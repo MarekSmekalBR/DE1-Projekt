@@ -93,7 +93,7 @@ Komponenta *seg_bcd_d* převádí 4bitové binární číslo na odpovídající 
 
 <ins>**Bin2bcd**<ins>
 
-
+Komponenta bin2bcd převádí 8bitové binární číslo BIN na tři čtyřbitové BCD výstupy BCD_1, BCD_10 a BCD_100, které reprezentují jednotky, desítky a stovky. Převod probíhá při každé náběžné hraně hodinového signálu CLK, pokud není aktivní reset RST. V případě resetu se výstupy vynulují. Tento převod je nezbytný pro správné zobrazení čísel na sedmisegmentových displejích, protože každý displej přijímá hodnoty ve formátu BCD (Binary Coded Decimal).
 
 ![image](https://github.com/user-attachments/assets/94b8e407-5999-44fb-be5d-33b7c0ba2fa6)
 
