@@ -71,6 +71,12 @@ Luminosity
 PWM  
 ![image](https://github.com/user-attachments/assets/e55e5a58-f3e8-4b60-b080-04a394fde615)
 
+Seg_bcd_d  
+![image](https://github.com/user-attachments/assets/893d600c-1da9-404e-8757-2ede3ee9e6b6)
+
+Bin2bcd
+![image](https://github.com/user-attachments/assets/94b8e407-5999-44fb-be5d-33b7c0ba2fa6)
+
 ## Instrukce
 
 ## Reference
