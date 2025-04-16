@@ -9,7 +9,7 @@ Marek Smékal: Zodpovědný za vytváření README souboru a pomoc s programová
 Matěj Rýdel: Zodpovědný za vytváření README souboru a pomoc s programováním
 
 ## Teoretický úvod
-Náš projekt je zaměřen na návrh a implementaci PWM (Pulse Width Modulation) v jazyce VHDL na vývojové desce Nexys A7-50T. Cílem je řízení jasu dvou LED diod pomocí nezávislých PWM kanálů. Uživatel vybírá, která LED má být ovládána, prostřednictvím tří přepínačů: první přepínač slouží pro ovládání první LED, druhý pro druhou LED a třetí pro současné řízení obou. Jas LED je nastavován pomocí dvou tlačítek – jedno slouží ke zvýšení intenzity o 10 %, druhé k jejímu snížení.
+Náš projekt je zaměřen na návrh a implementaci PWM (Pulse Width Modulation) v jazyce VHDL na vývojové desce Nexys A7-50T. Cílem je řízení jasu dvou LED diod pomocí nezávislých PWM kanálů. Uživatel vybírá, která LED má být ovládána, prostřednictvím tří přepínačů: první přepínač slouží pro ovládání první LED, druhý pro druhou LED. Jas LED je nastavován pomocí dvou tlačítek – jedno slouží ke zvýšení intenzity o 10 %, druhé k jejímu snížení.
 
 Pro každou LED je vyhrazen samostatný tříciferný sedmisegmentový displej, který zobrazuje aktuální hodnotu nastaveného jasu ve formátu procent. Systém umožňuje plynulé a přehledné řízení intenzity světla a zároveň demonstruje praktické využití FPGA a jazyka VHDL pro tvorbu konfigurovatelných digitálních systémů. 
 
@@ -25,7 +25,7 @@ Projekt je implementován na vývojové desce Nexys A7-50T od firmy Digilent, kt
 
 LED0 a LED1 – výstupní LED diody řízené pomocí PWM
 
-SW0 a SW1 – přepínače pro výběr kanálu (LED0, LED1, obě zároveň)
+SW0 a SW1 – přepínače pro výběr kanálu (LED0, LED1)
 
 BTNL (Left) a BTNR (Right) – tlačítka pro nastavování jasu po 10 % (snížení / zvýšení)
 
