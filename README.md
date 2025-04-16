@@ -75,7 +75,7 @@ Komponenta * *clock_en_20Hz* * slouží k vytváření krátkých pulzů s frekv
 
 <ins>**Luminosity**<ins>  
 
-
+Komponenta luminosity slouží k řízení hodnoty intenzity světla v rozsahu 0–100 %. Na základě stisků tlačítek high a low zvyšuje nebo snižuje vnitřní čítač po krocích 10. Hodnota je aktualizována pouze tehdy, pokud je aktivní signál en a zároveň change_en. Tlačítko rst provede reset čítače na nulu. Pokud jsou obě tlačítka stisknuta současně, hodnota se nemění. Výstupní signál lum obsahuje aktuální intenzitu v osmibitovém formátu.
 
 ![image](https://github.com/user-attachments/assets/3b60fa7b-57da-42c8-afad-159e59e96bfb)
 
