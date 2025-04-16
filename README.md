@@ -81,7 +81,7 @@ Komponenta *luminosity* slouží k řízení hodnoty intenzity světla v rozsahu
 
 <ins>**PWM**<ins> 
 
-
+Komponenta PWM_gen generuje PWM signál na základě vstupní hodnoty lum, která určuje pracovní cyklus (duty cycle). Po aktivaci signálem en čítač běží od 0 do C_END - 1 a pokud aktuální hodnota čítače překročí lum, výstup pwm_out se nastaví na '0', jinak zůstává '1'. Tím vzniká signál s proměnlivou šířkou pulzu odpovídající požadovanému jasu LED. Vstup rst provádí reset čítače. Hodnota C_END určuje rozlišení PWM.
 
 ![image](https://github.com/user-attachments/assets/e55e5a58-f3e8-4b60-b080-04a394fde615)
 
