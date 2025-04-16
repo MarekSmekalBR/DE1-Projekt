@@ -89,4 +89,5 @@ Bin2bcd
 
 ## Reference
 1. [Online VHDL Testbench Template Generator](https://vhdl.lapinoo.net/)
+2. [Nexys A7 Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
 
