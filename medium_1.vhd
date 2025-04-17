@@ -18,7 +18,6 @@
 -- 
 ----------------------------------------------------------------------------------
 
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -27,15 +26,11 @@ port (
         BTNC            : in STD_LOGIC; -- reset servo position to the middle
         BTNL            : in STD_LOGIC; -- turn servo left
         BTNR            : in STD_LOGIC; -- turn servo right
-        
         CLK_10kHz       : in STD_LOGIC; -- enable signal with low frequency for reading 
         CLK_20Hz        : in STD_LOGIC; -- enable signal with high frequency for pwm counter (300*PWM frequency)
-        CLK      : in STD_LOGIC; -- main clock
-        
+        CLK             : in STD_LOGIC; -- main clock
         RST             : in STD_LOGIC; -- reset
-        
         SW_1            : in STD_LOGIC;
-        
         PWM             : out STD_LOGIC; -- PWM output
         SEG_1           : out STD_LOGIC_VECTOR (6 downto 0); -- rotation percentage number in ones place for 7-segm display
         SEG_10          : out STD_LOGIC_VECTOR (6 downto 0); -- rotation percentage number in tens place for 7-segm display
@@ -105,7 +100,7 @@ architecture Behavioral of medium_1 is
     );
     end component;
     
-    signal sig_pos              : STD_LOGIC_VECTOR (7 downto 0); -- position signal
+    signal sig_pos                 : STD_LOGIC_VECTOR (7 downto 0); -- position signal
     signal BCD_1, BCD_10, BCD_100  : STD_LOGIC_VECTOR (3 downto 0); -- BCD signals
     
 begin
@@ -161,5 +156,6 @@ bin_to_bcd: bin2bcd -- converts binary value to BCD
             seg     => SEG_100
         );
 end Behavioral;
+
 
 
