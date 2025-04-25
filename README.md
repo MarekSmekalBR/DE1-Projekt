@@ -50,11 +50,9 @@ Projekt byl vytvořen v prostředí Vivado v jazyce VHDL. Návrh je rozdělen do
 
 Clock Divider – převádí 100 MHz vstupní hodiny na pomalejší frekvenci vhodnou pro čítání a generování PWM
 
-PWM Generátor (2x) – každý generátor vytváří signál s nastavitelným pracovním cyklem, který určuje jas LED
+PWM Generátor – generátor vytváří signál s nastavitelným pracovním cyklem, který určuje jas LED
 
 Řízení vstupů – zpracovává stavy přepínačů a tlačítek, určuje aktivní kanál a aktualizuje hodnotu duty cycle
-
-Segmentový displej – zobrazuje hodnoty duty cycle ve formátu procent
 
 Top-level entita – propojuje všechny komponenty, určuje směr a logiku signálů
 
@@ -102,16 +100,15 @@ Komponenta *bin2bcd* převádí 8bitové binární číslo *BIN* na tři čtyřb
 ## Instrukce
 
 Krok 1:
-Připojí se napájení a ověří se správné zapojení všech komponent. LED diody jsou připojeny pouze na breadboard, čímž je zajištěna lepší rozlišitelnost změn ve svítivosti. Breadboard je propojen s vývojovou deskou prostřednictvím JA konektorů.
+Připojí se napájení a ověří se správné zapojení všech komponent. LED diody jsou připojeny na breadboard, čímž je zajištěna lepší rozlišitelnost změn ve svítivosti oproti desce Nexys. Breadboard je propojen s vývojovou deskou prostřednictvím JA konektorů.
 
 ![IMG_20250425_124051113_1](https://github.com/user-attachments/assets/f6c51059-0738-4ed6-b6ca-c460a8fbe37b)
 
-
 Krok 2:
-Pomocí přepínače SW0 nebo SW1 se aktivuje řízení konkrétní LED diody. SW0 slouží pro ovládání první LED, SW1 pro druhou. Pokud jsou aktivovány oba přepínače, ovládají se obě LED současně.
+Pomocí přepínače SW0 nebo SW1 se aktivuje řízení konkrétní diody. SW0 slouží pro ovládání první LED, SW1 pro druhou. Pokud jsou aktivovány oba přepínače, ovládají se obě LED současně.
 
 Krok 3:
-Po aktivaci LED se na přidruženém tříciferném sedmisegmentovém displeji zobrazí aktuální hodnota jasu ve formátu procent (50 %). Tlačítky BTNL a BTNR se hodnota jasu upravuje – BTNL snižuje jas, zatímco BTNR jej zvyšuje. Pokud jsou stisknuta obě tlačítka současně, nedojde ke změně hodnoty. Jas je nastavitelný v rozsahu od 1 % do 100 %.
+Po aktivaci LED se na přidruženém tříciferném sedmisegmentovém displeji zobrazí aktuální hodnota jasu ve formátu procent. Tlačítky BTNL a BTNR se hodnota jasu upravuje – BTNL snižuje jas, zatímco BTNR jej zvyšuje. Pokud jsou stisknuta obě tlačítka současně, nedojde ke změně hodnoty. Jas je nastavitelný v rozsahu od 1 % do 100 %.
 
 ![IMG_20250425_124226401_1](https://github.com/user-attachments/assets/ff214bde-f9bd-4b08-a304-632ac9aa8828)
 *Ovládání pravé diody - zvýšení jasu na maximum*
@@ -120,10 +117,10 @@ Po aktivaci LED se na přidruženém tříciferném sedmisegmentovém displeji z
 *Ovládání levé diody - snížení jasu na minimum*
 
 ![IMG_20250425_124356216_1](https://github.com/user-attachments/assets/30ceed31-e8a2-4005-af00-eed59df99df7)
-*Stistknutí obou tlačítek současně*
+*Stistknutí obou tlačítek současně - jas se nijak nezmění*
 
 Krok 4:
-Tlačítko BTNC slouží k vynulování jasu – provede reset systému. Po jeho stisku se hodnota jasu vrátí na výchozí hodnotu 50 %.
+Tlačítko BTNC slouží k resetování jasu. Po jeho stisku se hodnota jasu vrátí na výchozí hodnotu 50 %.
 
 ![IMG_20250425_124051113_1](https://github.com/user-attachments/assets/453c2c30-7a5e-4167-81fd-057b39b8fcf2)
 
