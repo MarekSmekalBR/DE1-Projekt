@@ -61,11 +61,41 @@ Top-level entita – propojuje všechny komponenty, určuje směr a logiku sign�
 ### Top Level
 
 ### Simulace komponentů
-<ins>**Clock Enable Ratio**<ins>  
+<ins>**Generátor hodinového impulzu s volitelným poměrem**<ins>  
 
 Tato komponenta generuje impulz na základě příchozího hodinového signálu. Pomocí vstupu switch lze volit mezi dvěma frekvencemi. Pokud je switch = 0, výstupní impulzy mají základní periodu (PERIOD). Pokud je switch = 1, perioda se násobí hodnotou RATIO, tedy výstupní impulzy jsou méně časté. nterní čítač počítá až do dané hodnoty (buď PERIOD nebo PERIOD * RATIO) a po přetečení vygeneruje jeden krátký impuls (pulse = '1').
 
 
+
+<ins>**Generátor hodinového impulzu**<ins>
+
+Tato komponenta slouží k vytváření impulzů na základě hlavního hodinového signálu (clk). Pomocí generického parametru PERIOD se nastavuje, kolik taktů hlavního hodinového signálu je potřeba pro vytvoření jednoho výstupního impulzu (pulse). Po dosažení této hodnoty se vygeneruje jeden krátký impulz (pulse = '1') a čítač se vynuluje. Komponenta slouží jako jednoduchý časovač nebo dělič frekvence, kdy můžeme např. z 100 MHz hodinového signálu vytvořit mnohem pomalejší řídicí impulzy pro jiné části systému.
+
+
+
+
+<ins>**Clock Enable**<ins>
+
+Tato komponenta vytváří periodické impulzy na výstupu pulse podle hodnoty zadané parametrem PERIOD. Čítač uvnitř komponenty počítá jednotlivé taktovací cykly signálu clk. Po dosažení hodnoty PERIOD - 1 se vygeneruje jeden krátký impulz a čítač se vynuluje. Signál rst slouží k resetování komponenty do výchozího stavu. Komponenta se používá pro zpomalení hodinového signálu nebo pro řízení operací, které se nemají provádět při každém taktu.
+
+
+
+
+<ins>**Segmentový kontrolér**<ins>
+
+Tato komponenta slouží k multiplexnímu řízení osmimístného sedmisegmentového displeje. Pomocí interního registru sig_an dochází k postupnému přepínání jednotlivých anod tak, aby se jednotlivé segmenty na všech osmi pozicích zdály svítit současně. Přepínání je řízeno taktovacím signálem CLK a je aktivní pouze při zapnutém vstupu EN. Výstupy CA až CG určují, které segmenty jsou v daném okamžiku aktivní, a jsou přiřazovány podle toho, která anoda je aktuálně aktivní. Výstup DP (desetinná tečka) je trvale vypnut. Signál RST zajišťuje návrat do výchozího stavu – aktivní první anoda. Komponenta zajišťuje efektivní zobrazení více číslic při použití jediného sady výstupních signálů.
+
+
+
+
+<ins>**Regulátor jasu**<ins>
+
+Tato komponenta slouží k řízení úrovně jasu LED diod. Výstupní signál lum udává hodnotu intenzity v rozsahu 1 až 100, přičemž výchozí hodnota po resetu je nastavena na 50. Pomocí vstupů up a down lze tuto hodnotu zvyšovat nebo snižovat. Změny jsou prováděny pouze v případě, že komponenta je aktivována (comp_en = '1') a zároveň povolena (en = '1'). Zajištěna je ochrana proti současnému stisknutí obou tlačítek (up i down) a také proti překročení hranic rozsahu. Hodnota jasu je aktualizována při každém náběžné hraně hodinového signálu clk.
+
+
+
+
+<ins>****<ins>
 
 ## Instrukce
 
