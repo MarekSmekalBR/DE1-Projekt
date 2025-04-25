@@ -100,33 +100,35 @@ Komponenta *bin2bcd* převádí 8bitové binární číslo *BIN* na tři čtyřb
 ## Instrukce
 
 Krok 1:
-Připojte napájení a ověřte správné zapojení všech komponent. LED diody zapojte pouze na breadboard, aby bylo možné lépe pozorovat rozdíly v jejich svítivosti. Breadboard je připojen k vývojové desce pomocí JA konektorů.
+Připojí se napájení a ověří se správné zapojení všech komponent. LED diody jsou připojeny pouze na breadboard, čímž je zajištěna lepší rozlišitelnost změn ve svítivosti. Breadboard je propojen s vývojovou deskou prostřednictvím JA konektorů.
 
+![IMG_20250425_124051113_1](https://github.com/user-attachments/assets/f6c51059-0738-4ed6-b6ca-c460a8fbe37b)
 
 
 Krok 2:
-Pomocí přepínače SW0 nebo SW1 (v našem projektu slouží jako povolení ovládání jasu) aktivujte systém. Pokud není přepínač zapnutý, tlačítka nebudou mít žádný efekt.
-
-
+Pomocí přepínače SW0 nebo SW1 se aktivuje řízení konkrétní LED diody. SW0 slouží pro ovládání první LED, SW1 pro druhou. Pokud jsou aktivovány oba přepínače, ovládají se obě LED současně.
 
 Krok 3:
-Stiskněte tlačítko BTNL pro snížení jasu LED. Tlačítko BTNR naopak jas zvýší. Jas je nastavitelný v rozsahu od 0 do 100 %.
+Po aktivaci LED se na přidruženém tříciferném sedmisegmentovém displeji zobrazí aktuální hodnota jasu ve formátu procent (50 %). Tlačítky BTNL a BTNR se hodnota jasu upravuje – BTNL snižuje jas, zatímco BTNR jej zvyšuje. Pokud jsou stisknuta obě tlačítka současně, nedojde ke změně hodnoty. Jas je nastavitelný v rozsahu od 1 % do 100 %.
 
+![IMG_20250425_124226401_1](https://github.com/user-attachments/assets/ff214bde-f9bd-4b08-a304-632ac9aa8828)
+*Snížení jasu levé diody na minimum a zvýšení jasu pravé diody na maximum*
+
+![IMG_20250425_124216722_1](https://github.com/user-attachments/assets/31320315-87cd-42c4-8d92-40eae1f741aa)
+*Snížení jasu pravé diody na 50 %*
+
+![IMG_20250425_124356216_1](https://github.com/user-attachments/assets/30ceed31-e8a2-4005-af00-eed59df99df7)
 
 
 Krok 4:
-Stisknutím BTNC nastavíte jas LED na výchozí hodnotu (0 %).
+Tlačítko BTNC slouží k vynulování jasu – provede reset systému. Po jeho stisku se hodnota jasu vrátí na výchozí hodnotu 50 %.
 
+![IMG_20250425_124051113_1](https://github.com/user-attachments/assets/453c2c30-7a5e-4167-81fd-057b39b8fcf2)
 
- 
 Krok 5:
-Aktuální hodnota jasu (0–100 %) je zobrazena na 7segmentovém displeji.
+Tlačítkem BTND lze celý systém deaktivovat – displej zhasne a připojené LED začnou svítit na maximální intenzitu bez možnosti úpravy jasu.
 
-
-
-Krok 6:
-Pokud stisknete současně tlačítka BTNL a BTNR, hodnota jasu se nezmění.
-
+![IMG_20250425_124340133](https://github.com/user-attachments/assets/a3ffe822-9926-458e-8e1d-df2640c04253)
 
 
 ## Reference
