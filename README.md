@@ -37,7 +37,7 @@ Breadboard se samotnými LED a rezistory
 
 ![image](https://github.com/user-attachments/assets/1fa2566f-5888-4dca-b762-d699d41f3add)
 
-*Využité piny na desce Nexys*
+*Zobrazení pinů na desce Nexys*
 
 ## Popis softwaru
 Projekt byl vytvořen v prostředí Vivado v jazyce VHDL. Návrh je rozdělen do několika modulárních komponent, které spolu komunikují prostřednictvím signálů.
