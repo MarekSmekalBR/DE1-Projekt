@@ -44,13 +44,13 @@ Projekt byl vytvořen v prostředí Vivado v jazyce VHDL. Návrh je rozdělen do
 
 <ins>Hlavní moduly:<ins>
 
+Top-level entita – propojuje všechny komponenty, určuje směr a logiku signálů
+
 Clock Divider – převádí 100 MHz vstupní hodiny na pomalejší frekvenci vhodnou pro čítání a generování PWM
 
 PWM Generátor – generátor vytváří signál s nastavitelným pracovním cyklem, který určuje jas LED
 
 Řízení vstupů – zpracovává stavy přepínačů a tlačítek, určuje aktivní kanál a aktualizuje hodnotu duty cycle
-
-Top-level entita – propojuje všechny komponenty, určuje směr a logiku signálů
 
 ### Zapojení
 
