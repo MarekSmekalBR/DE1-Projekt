@@ -61,41 +61,8 @@ Top-level entita – propojuje všechny komponenty, určuje směr a logiku sign�
 ### Top Level
 
 ### Simulace komponentů
-<ins>**CLK100MHz**<ins>  
+<ins>**Clock Enable Ratio**<ins>  
 
-Komponenta *clock_en_100MHz* generuje výstupní puls *pulse* s periodou nastavitelnou pomocí parametru *n_periods*. Každý *n_periods*-tý takt hodinového signálu *clk* je *pulse* nastaven na '1'. Komponenta je resetována vstupem *rst*. Slouží jako dělička hodin, například pro zpomalení řízení nebo časování dalších částí návrhu.
-
-![image](https://github.com/user-attachments/assets/5855c609-5462-46cf-8999-8a8ba929a9c9)
-
-<ins>**CLK20Hz**<ins>
-
-Komponenta *clock_en_20Hz* slouží k vytváření krátkých pulzů s frekvencí 20 Hz. Pulz *pulse* je aktivní jeden takt hodinového signálu *clk*, a opakuje se každých *n_periods taktů*. Vstup *rst* resetuje vnitřní čítač. Komponenta funguje jako dělička hodinového signálu z 100 MHz na 20 Hz a může být použita k časování pomalejších procesů, jako je čtení tlačítek nebo změna jasu LED.
-
-![image](https://github.com/user-attachments/assets/ba2d61d3-ba38-4a36-9c4a-53828a341a0a)
-
-<ins>**Luminosity**<ins>  
-
-Komponenta *luminosity* slouží k řízení hodnoty intenzity světla v rozsahu 0–100 %. Na základě stisků tlačítek *high* a *low* zvyšuje nebo snižuje vnitřní čítač po krocích 10. Hodnota je aktualizována pouze tehdy, pokud je aktivní signál *en* a zároveň *change_en*. Tlačítko *rst* provede reset čítače na nulu. Pokud jsou obě tlačítka stisknuta současně, hodnota se nemění. Výstupní signál *lum* obsahuje aktuální intenzitu v osmibitovém formátu.
-
-![image](https://github.com/user-attachments/assets/3b60fa7b-57da-42c8-afad-159e59e96bfb)
-
-<ins>**PWM**<ins> 
-
-Komponenta *PWM_gen* generuje PWM signál na základě vstupní hodnoty *lum*, která určuje pracovní cyklus (duty cycle). Po aktivaci signálem *en* čítač běží od 0 do *C_END - 1* a pokud aktuální hodnota čítače překročí *lum*, výstup *pwm_out* se nastaví na '0', jinak zůstává '1'. Tím vzniká signál s proměnlivou šířkou pulzu odpovídající požadovanému jasu LED. Vstup *rst* provádí reset čítače. Hodnota *C_END* určuje rozlišení PWM.
-
-![image](https://github.com/user-attachments/assets/e55e5a58-f3e8-4b60-b080-04a394fde615)
-
-<ins>**Seg_bcd_d**<ins>  
-
-Komponenta *seg_bcd_d* převádí 4bitové binární číslo na odpovídající výstup pro sedmisegmentový displej (segments a–g). Vstup *bin* reprezentuje číslici 0–9, která je dekódována do sedmisegmentového výstupu *seg*. Pokud je aktivní signál *clear*, všechny segmenty se vypnou (*seg <= "1111111"*). Tím je možné jednotlivé číslice na displeji jednoduše zobrazovat nebo mazat.
-
-![image](https://github.com/user-attachments/assets/893d600c-1da9-404e-8757-2ede3ee9e6b6)
-
-<ins>**Bin2bcd**<ins>
-
-Komponenta *bin2bcd* převádí 8bitové binární číslo *BIN* na tři čtyřbitové BCD výstupy *BCD_1*, *BCD_10* a BCD_100*, které reprezentují jednotky, desítky a stovky. Převod probíhá při každé náběžné hraně hodinového signálu *CLK*, pokud není aktivní reset *RST*. V případě resetu se výstupy vynulují. Tento převod je nezbytný pro správné zobrazení čísel na sedmisegmentových displejích, protože každý displej přijímá hodnoty ve formátu BCD (Binary Coded Decimal).
-
-![image](https://github.com/user-attachments/assets/94b8e407-5999-44fb-be5d-33b7c0ba2fa6)
 
 ## Instrukce
 
