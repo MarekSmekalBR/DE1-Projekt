@@ -102,20 +102,32 @@ Komponenta *bin2bcd* převádí 8bitové binární číslo *BIN* na tři čtyřb
 Krok 1:
 Připojte napájení a zkontrolujte správné zapojení všech komponent – tlačítek, LED diod a propojovacích kabelů. LED mohou být buď na desce, nebo externí (připojené přes breadboard).
 
+
+
 Krok 2:
 Pomocí přepínače SW (v našem projektu slouží jako povolení ovládání jasu) aktivujte systém. Pokud není přepínač zapnutý, tlačítka nebudou mít žádný efekt.
+
+
 
 Krok 3:
 Stiskněte tlačítko BTNL pro snížení jasu LED. Tlačítko BTNR naopak jas zvýší. Jas je nastavitelný v rozsahu od 0 do 100 %.
 
+
+
 Krok 4:
 Stisknutím BTNC nastavíte jas LED na výchozí hodnotu (0 %).
+
+
  
 Krok 5:
 Aktuální hodnota jasu (0–100 %) je zobrazena na 7segmentovém displeji.
 
+
+
 Krok 6:
 Pokud stisknete současně tlačítka BTNL a BTNR, hodnota jasu se nezmění.
+
+
 
 ## Reference
 1. [Online VHDL Testbench Template Generator](https://vhdl.lapinoo.net/)
