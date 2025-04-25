@@ -112,10 +112,10 @@ Krok 3:
 Po aktivaci LED se na přidruženém tříciferném sedmisegmentovém displeji zobrazí aktuální hodnota jasu ve formátu procent (50 %). Tlačítky BTNL a BTNR se hodnota jasu upravuje – BTNL snižuje jas, zatímco BTNR jej zvyšuje. Pokud jsou stisknuta obě tlačítka současně, nedojde ke změně hodnoty. Jas je nastavitelný v rozsahu od 1 % do 100 %.
 
 ![IMG_20250425_124226401_1](https://github.com/user-attachments/assets/ff214bde-f9bd-4b08-a304-632ac9aa8828)
-*Snížení jasu levé diody na minimum a zvýšení jasu pravé diody na maximum*
+*Ovládání pravé diody - zvýšení jasu na maximum*
 
 ![IMG_20250425_124216722_1](https://github.com/user-attachments/assets/31320315-87cd-42c4-8d92-40eae1f741aa)
-*Snížení jasu pravé diody na 50 %*
+*Ovládání levé diody - snížení jasu na minimum*
 
 ![IMG_20250425_124356216_1](https://github.com/user-attachments/assets/30ceed31-e8a2-4005-af00-eed59df99df7)
 *Stistknutí obou tlačítek současně*
