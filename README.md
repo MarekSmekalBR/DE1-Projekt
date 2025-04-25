@@ -40,6 +40,7 @@ Interní 100 MHz hodinový signál – zdroj hodin pro systém
 Dělička hodin (clock divider) – pro zpomalení signálu na vhodnou frekvenci pro PWM a logiku řízení
 
 ![image](https://github.com/user-attachments/assets/1fa2566f-5888-4dca-b762-d699d41f3add)
+
 *Využité piny na desce*
 
 ## Popis softwaru
