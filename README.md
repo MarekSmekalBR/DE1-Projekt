@@ -9,7 +9,7 @@ Marek Smékal: Zodpovědný za vytváření README souboru a pomoc s programová
 Matěj Rýdel: Zodpovědný za vytváření README souboru a pomoc s programováním
 
 ## Teoretický úvod
-Náš projekt je zaměřen na návrh a implementaci PWM (Pulse Width Modulation) v jazyce VHDL na vývojové desce Nexys A7-50T. Cílem je řízení jasu dvou LED diod pomocí nezávislých PWM kanálů. Uživatel vybírá, která LED má být ovládána, prostřednictvím dvou přepínačů: první přepínač slouží pro ovládání první LED, druhý pro druhou LED. Jas LED je nastavován pomocí dvou tlačítek – jedno slouží ke zvýšení intenzity o 10 %, druhé k jejímu snížení.
+Náš projekt je zaměřen na návrh a implementaci PWM (Pulse Width Modulation) v jazyce VHDL na vývojové desce Nexys A7-50T. Cílem je řízení jasu dvou LED diod pomocí PWM. Uživatel vybírá, která LED má být ovládána, prostřednictvím dvou přepínačů: první přepínač slouží pro ovládání první LED, druhý pro druhou LED. Jas LED je nastavován pomocí dvou tlačítek – jedno slouží ke zvýšení intenzity o 10 %, druhé k jejímu snížení.
 
 Pro každou LED je vyhrazen samostatný tříciferný sedmisegmentový displej, který zobrazuje aktuální hodnotu nastaveného jasu ve formátu procent. Systém umožňuje plynulé a přehledné řízení intenzity světla a zároveň demonstruje praktické využití FPGA a jazyka VHDL pro tvorbu konfigurovatelných digitálních systémů. 
 
@@ -98,6 +98,24 @@ Komponenta *bin2bcd* převádí 8bitové binární číslo *BIN* na tři čtyřb
 ![image](https://github.com/user-attachments/assets/94b8e407-5999-44fb-be5d-33b7c0ba2fa6)
 
 ## Instrukce
+
+Krok 1:
+Připojte napájení a zkontrolujte správné zapojení všech komponent – tlačítek, LED diod a propojovacích kabelů. LED mohou být buď na desce, nebo externí (připojené přes breadboard).
+
+Krok 2:
+Pomocí přepínače SW (v našem projektu slouží jako povolení ovládání jasu) aktivujte systém. Pokud není přepínač zapnutý, tlačítka nebudou mít žádný efekt.
+
+Krok 3:
+Stiskněte tlačítko BTNL pro snížení jasu LED. Tlačítko BTNR naopak jas zvýší. Jas je nastavitelný v rozsahu od 0 do 100 %.
+
+Krok 4:
+Stisknutím BTNC nastavíte jas LED na výchozí hodnotu (0 %).
+ 
+Krok 5:
+Aktuální hodnota jasu (0–100 %) je zobrazena na 7segmentovém displeji.
+
+Krok 6:
+Pokud stisknete současně tlačítka BTNL a BTNR, hodnota jasu se nezmění.
 
 ## Reference
 1. [Online VHDL Testbench Template Generator](https://vhdl.lapinoo.net/)
