@@ -100,7 +100,7 @@ Komponenta *bin2bcd* převádí 8bitové binární číslo *BIN* na tři čtyřb
 ## Instrukce
 
 Krok 1:
-Připojte napájení a zkontrolujte správné zapojení všech komponent – tlačítek, LED diod a propojovacích kabelů. LED mohou být buď na desce, nebo externí (připojené přes breadboard).
+Připojte napájení a ověřte správné zapojení všech komponent. LED diody zapojte pouze na breadboard, aby bylo možné lépe pozorovat rozdíly v jejich svítivosti. Breadboard je připojen k vývojové desce pomocí JA konektorů.
 
 
 
