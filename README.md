@@ -116,7 +116,7 @@ Po aktivaci LED se na přidruženém tříciferném sedmisegmentovém displeji z
 *Stistknutí obou tlačítek současně - jas se nijak nezmění*
 
 Krok 4:
-Tlačítko BTNC slouží k resetování jasu. Po jeho stisku se hodnota jasu obou diod vrátí na výchozí hodnotu 50 %.
+Tlačítko BTNC slouží k resetování jasu. Po jeho stisku se hodnota jasu aktivních diod vrátí na výchozí hodnotu, tedy 50 %.
 
 ![IMG_20250425_124051113_1](https://github.com/user-attachments/assets/453c2c30-7a5e-4167-81fd-057b39b8fcf2)
 
