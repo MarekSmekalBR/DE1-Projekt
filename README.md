@@ -33,11 +33,7 @@ BTNC (Center Button) – slouží jako reset celého systému, vrací hodnoty du
 
 6-místný sedmisegmentový displej – zobrazení aktuálního jasu vybrané LED v procentech, rozděleno po třech místech pro každou LED
 
-<ins>Další využité prostředky:<ins>
-
-Interní 100 MHz hodinový signál – zdroj hodin pro systém
-
-Dělička hodin (clock divider) – pro zpomalení signálu na vhodnou frekvenci pro PWM a logiku řízení
+Breadboard se samotnými LED a rezistory
 
 ![image](https://github.com/user-attachments/assets/1fa2566f-5888-4dca-b762-d699d41f3add)
 
