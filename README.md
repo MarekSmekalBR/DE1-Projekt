@@ -96,7 +96,7 @@ Tato komponenta slouží k řízení úrovně jasu LED diod. Výstupní signál 
 ## Instrukce
 
 Krok 1:
-Připojí se napájení a ověří se správné zapojení všech komponent. LED diody jsou připojeny na breadboard, čímž je zajištěna lepší rozlišitelnost změn ve svítivosti oproti desce Nexys. Breadboard je propojen s vývojovou deskou prostřednictvím JA konektorů.
+Připojí se napájení a ověří se správné zapojení všech komponent. Diody jsou připojeny na breadboard, čímž je zajištěna lepší rozlišitelnost změn ve svítivosti oproti desce Nexys. Breadboard je propojen s vývojovou deskou prostřednictvím JA konektorů.
 
 ![IMG_20250425_124051113_1](https://github.com/user-attachments/assets/f6c51059-0738-4ed6-b6ca-c460a8fbe37b)
 
