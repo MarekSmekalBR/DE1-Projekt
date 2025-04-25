@@ -129,3 +129,4 @@ Tlačítkem BTND lze celý systém deaktivovat – displej zhasne a připojené 
 ## Reference
 1. [Online VHDL Testbench Template Generator](https://vhdl.lapinoo.net/)
 2. [Nexys A7 Reference Manual](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual)
+3. [Basic writing and formating](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
