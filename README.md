@@ -62,7 +62,7 @@ Top-level entita – propojuje všechny komponenty, určuje směr a logiku sign�
 
 ### Simulace komponentů
 <ins>**Clock Enable Ratio**<ins>  
-
+Tato komponenta generuje impulz na základě příchozího hodinového signálu. Pomocí vstupu switch lze volit mezi dvěma frekvencemi. Pokud je switch = 0, výstupní impulzy mají základní periodu (PERIOD). Pokud je switch = 1, perioda se násobí hodnotou RATIO, tedy výstupní impulzy jsou méně časté. nterní čítač počítá až do dané hodnoty (buď PERIOD nebo PERIOD * RATIO) a po přetečení vygeneruje jeden krátký impuls (pulse = '1').
 
 ## Instrukce
 
