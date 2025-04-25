@@ -105,7 +105,7 @@ Připojte napájení a ověřte správné zapojení všech komponent. LED diody 
 
 
 Krok 2:
-Pomocí přepínače SW (v našem projektu slouží jako povolení ovládání jasu) aktivujte systém. Pokud není přepínač zapnutý, tlačítka nebudou mít žádný efekt.
+Pomocí přepínače SW0 nebo SW1 (v našem projektu slouží jako povolení ovládání jasu) aktivujte systém. Pokud není přepínač zapnutý, tlačítka nebudou mít žádný efekt.
 
 
 
