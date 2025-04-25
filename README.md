@@ -118,7 +118,7 @@ Po aktivaci LED se na přidruženém tříciferném sedmisegmentovém displeji z
 *Snížení jasu pravé diody na 50 %*
 
 ![IMG_20250425_124356216_1](https://github.com/user-attachments/assets/30ceed31-e8a2-4005-af00-eed59df99df7)
-
+*Stistknutí obou tlačítek současně
 
 Krok 4:
 Tlačítko BTNC slouží k vynulování jasu – provede reset systému. Po jeho stisku se hodnota jasu vrátí na výchozí hodnotu 50 %.
