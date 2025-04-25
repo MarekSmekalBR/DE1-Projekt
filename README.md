@@ -98,7 +98,7 @@ Tato komponenta slouží k řízení úrovně jasu LED diod. Výstupní signál 
 Krok 1:
 Připojí se napájení desky a ověří se správné zapojení všech komponent. Diody jsou připojeny na breadboard, čímž je zajištěna lepší rozlišitelnost změn ve svítivosti oproti desce Nexys. Breadboard je propojen s vývojovou deskou prostřednictvím JA konektorů.
 
-![IMG_20250425_124051113_1](https://github.com/user-attachments/assets/f6c51059-0738-4ed6-b6ca-c460a8fbe37b)
+![Snímek obrazovky 2025-04-25 211140](https://github.com/user-attachments/assets/7ce09b4b-5083-42cf-a377-e2d0f5eb9e88)
 
 Krok 2:
 Pomocí přepínače SW0 nebo SW1 se aktivuje řízení konkrétní diody. SW0 slouží pro ovládání první LED, SW1 pro druhou. Pokud jsou aktivovány oba přepínače, ovládají se obě LED současně.
