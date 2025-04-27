@@ -23,7 +23,7 @@ Projekt je implementován na vývojové desce Nexys A7-50T od firmy Digilent, kt
 
 <ins>Využité hardwarové prvky:<ins>
 
-LED0 a LED1 – výstupní LED diody řízené pomocí PWM
+Výstupní LED diody řízené pomocí PWM
 
 SW0 a SW1 – přepínače pro výběr kanálu (LED0, LED1)
 
