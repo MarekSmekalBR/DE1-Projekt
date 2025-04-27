@@ -31,6 +31,8 @@ BTNL (Button Left) a BTNR (Button Right) – tlačítka pro nastavování jasu (
 
 BTNC (Center Button) – slouží jako reset celého systému, vrací hodnoty duty cycle obou LED na výchozí hodnotu (50 %)
 
+BTND (Button Down) - slouží pro deaktivaci systému 
+
 6-místný sedmisegmentový displej – zobrazení aktuálního jasu vybrané LED v procentech, rozděleno po třech místech pro každou LED
 
 Breadboard se samotnými LED a rezistory
