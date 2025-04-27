@@ -9,7 +9,7 @@ Marek Smékal: Zodpovědný za vytváření README souboru a pomoc s programová
 Matěj Rýdel: Zodpovědný za vytváření README souboru a pomoc s programováním
 
 ## Teoretický úvod
-Náš projekt je zaměřen na návrh a implementaci PWM (Pulse Width Modulation) v jazyce VHDL na vývojové desce Nexys A7-50T. Cílem je řízení jasu dvou LED diod pomocí PWM. Uživatel vybírá, která LED má být ovládána, prostřednictvím dvou přepínačů: první přepínač slouží pro ovládání první LED, druhý pro druhou LED. Jas LED je nastavován pomocí dvou tlačítek – jedno slouží ke zvýšení intenzity a druhé k jejímu snížení.
+Náš projekt je zaměřen na návrh a implementaci PWM (Pulse Width Modulation) v jazyce VHDL na vývojové desce Nexys A7-50T. Cílem je řízení jasu dvou LED pomocí PWM. Uživatel vybírá, která LED má být ovládána, prostřednictvím dvou přepínačů: první přepínač slouží pro ovládání první LED, druhý pro druhou LED. Jas LED je nastavován pomocí dvou tlačítek – jedno slouží ke zvýšení intenzity a druhé k jejímu snížení. Lze ovládat i obě LED současně.
 
 Pro každou LED je vyhrazen samostatný tříciferný sedmisegmentový displej, který zobrazuje aktuální hodnotu nastaveného jasu ve formátu procent. Systém umožňuje plynulé a přehledné řízení intenzity světla a zároveň demonstruje praktické využití FPGA a jazyka VHDL pro tvorbu konfigurovatelných digitálních systémů. 
 
@@ -23,13 +23,13 @@ Projekt je implementován na vývojové desce Nexys A7-50T od firmy Digilent, kt
 
 <ins>Využité hardwarové prvky:<ins>
 
-Výstupní LED diody řízené pomocí PWM
+Výstupní LED - diody řízené pomocí PWM
 
 SW0 a SW1 – přepínače pro výběr kanálu
 
 BTNL (Button Left) a BTNR (Button Right) – tlačítka pro nastavování jasu (snížení / zvýšení)
 
-BTNC (Center Button) – slouží jako reset celého systému, vrací hodnoty duty cycle obou LED na výchozí hodnotu (50 %)
+BTNC (Center Button) – slouží jako reset celého systému, vrací hodnoty duty cycle aktivních LED na výchozí hodnotu (50 %)
 
 BTND (Button Down) - slouží pro deaktivaci systému 
 
