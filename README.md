@@ -25,7 +25,7 @@ Projekt je implementován na vývojové desce Nexys A7-50T od firmy Digilent, kt
 
 Výstupní LED diody řízené pomocí PWM
 
-SW0 a SW1 – přepínače pro výběr kanálu (LED0, LED1)
+SW0 a SW1 – přepínače pro výběr kanálu
 
 BTNL (Button Left) a BTNR (Button Right) – tlačítka pro nastavování jasu (snížení / zvýšení)
 
