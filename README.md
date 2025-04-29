@@ -62,32 +62,32 @@ PWM Generátor – generátor vytváří signál s nastavitelným pracovním cyk
 ### Simulace komponentů
 <ins>**Generátor pulzů s volitelným poměrem**<ins>  
 
-Tato komponenta generuje výstupní pulz s nastavitelnou periodou podle vstupního hodinového signálu. Pomocí vstupu switch lze zvolit mezi základní periodou PERIOD a prodlouženou periodou PERIOD * RATIO. Vnitřní čítač počítá hodiny a při dosažení zvoleného limitu vygeneruje krátký pulz. Při aktivním resetu se čítač i výstupní pulz vynulují.
+Tato komponenta generuje výstupní pulz s nastavitelnou periodou podle vstupního hodinového signálu. Pomocí vstupu *switch* lze zvolit mezi základní periodou *PERIOD* a prodlouženou periodou *PERIOD * RATIO*. Vnitřní čítač počítá hodiny a při dosažení zvoleného limitu vygeneruje krátký pulz. Při aktivním resetu se čítač i výstupní pulz vynulují.
 
 
 
 <ins>**Nastavení intenzity**<ins>
 
-Tato komponenta slouží k řízení intenzity (např. jasu LED) v rozsahu 1 až 100. Při aktivaci vstupu up se hodnota zvyšuje, při down snižuje. Výchozí hodnota je 50. Komponenta reaguje pouze při aktivním comp_en a clk náběžné hraně. Při resetu (rst) se hodnota vrací na 50. Výsledná intenzita je dostupná na výstupu lum.
+Tato komponenta slouží k řízení intenzity (např. jasu LED) v rozsahu 1 až 100. Při aktivaci vstupu *up* se hodnota zvyšuje, při *down* snižuje. Výchozí hodnota je 50. Komponenta reaguje pouze při aktivním *comp_en* a *clk* náběžné hraně. Při resetu (*rst*) se hodnota vrací na 50. Výsledná intenzita je dostupná na výstupu *lum*.
 
 
 
 
 <ins>**Generátor PWM signálu**<ins>
 
-Tato komponenta vytváří PWM signál na základě vstupní hodnoty POS, která určuje šířku pulzu. Interní čítač počítá do hodnoty C_END, po jejímž dosažení se vynuluje a PWM signál se nastaví zpět na '1'. Jakmile čítač dosáhne hodnoty POS, výstupní signál se přepne na '0'. Komponenta se aktivuje pomocí vstupu en a lze ji resetovat signálem rst. Výstupní signál pwm_out poskytuje výsledný PWM výstup.
+Tato komponenta vytváří PWM signál na základě vstupní hodnoty *POS*, která určuje šířku pulzu. Interní čítač počítá do hodnoty *C_END*, po jejímž dosažení se vynuluje a PWM signál se nastaví zpět na '1'. Jakmile čítač dosáhne hodnoty *POS*, výstupní signál se přepne na '0'. Komponenta se aktivuje pomocí vstupu *en* a lze ji resetovat signálem *rst*. Výstupní signál *pwm_out* poskytuje výsledný PWM výstup.
 
 
 
 <ins>**Převodník binárního čísla na BCD**<ins>
 
-Tato komponenta převádí 8bitové binární číslo na BCD formát (stovky, desítky a jednotky). Převod probíhá pomocí posuvného algoritmu s korekcí hodnot (tzv. "double dabble"). Vnitřní stavový automat prochází stavy start, shift, check a done, kde se postupně zpracovává vstupní číslo. Převod začíná při změně vstupu BIN a aktivním hodinovém signálu CLK. Výsledné číslo je na výstupech BCD1, BCD10 a BCD100. Při resetu (RST) se stav i výstupy vynulují.
+Tato komponenta převádí 8bitové binární číslo na BCD formát (stovky, desítky a jednotky). Převod probíhá pomocí posuvného algoritmu s korekcí hodnot (tzv. "double dabble"). Vnitřní stavový automat prochází stavy *start*, *shift*, *check* a *done*, kde se postupně zpracovává vstupní číslo. Převod začíná při změně vstupu *BIN* a aktivním hodinovém signálu *CLK*. Výsledné číslo je na výstupech *BCD1*, *BCD10* a *BCD100*. Při resetu (*RST*) se stav i výstupy vynulují.
 
 
 
 <ins>**Ovladač 7-segmentových displejů**<ins>
 
-Tato komponenta slouží k řízení šesti 7-segmentových displejů pomocí multiplexování. V každém taktu hodinového signálu aktivuje postupně jednu anodu (AN) a připojí k ní odpovídající segmentové hodnoty (CA až CG). Vstupní signály SEGM1 až SEGM8 obsahují segmentové kódy pro jednotlivé pozice. Při resetu se aktivuje první displej, a pokud je komponenta povolena (EN), rotuje aktivní anoda. Desetinná tečka (DP) je trvale vypnuta.
+Tato komponenta slouží k řízení šesti 7-segmentových displejů pomocí multiplexování. V každém taktu hodinového signálu aktivuje postupně jednu anodu (*AN*) a připojí k ní odpovídající segmentové hodnoty (*CA* až *CG*). Vstupní signály *SEGM1* až *SEGM8* obsahují segmentové kódy pro jednotlivé pozice. Při resetu se aktivuje první displej, a pokud je komponenta povolena (*EN*), rotuje aktivní anoda. Desetinná tečka (*DP*) je trvale vypnuta.
 
 
 
@@ -96,13 +96,13 @@ Tato komponenta slouží k řízení šesti 7-segmentových displejů pomocí mu
 
 Tato komponenta integruje několik podkomponent pro řízení jasu LED pomocí PWM signálu a zobrazení procentuálního jasu na 7-segmentovém displeji. Hlavními součástmi jsou:
 
-luminosity – Tato komponenta řídí změny hodnoty jasu na základě vstupních tlačítek pro zvýšení a snížení hodnoty, a také pro resetování do střední hodnoty.
+*luminosity* – Tato komponenta řídí změny hodnoty jasu na základě vstupních tlačítek pro zvýšení a snížení hodnoty, a také pro resetování do střední hodnoty.
 
-PWM_LED – Generuje PWM signál, který řídí výkon LED diody na základě hodnoty jasu.
+*PWM_LED* – Generuje PWM signál, který řídí výkon LED diody na základě hodnoty jasu.
 
-bin2bcd – Převádí binární hodnotu jasu do formátu BCD pro zobrazení na displeji.
+*bin2bcd* – Převádí binární hodnotu jasu do formátu BCD pro zobrazení na displeji.
 
-bin2seg – Zobrazuje hodnoty BCD na 7-segmentovém displeji.
+*bin2seg* – Zobrazuje hodnoty BCD na 7-segmentovém displeji.
 
 Komponenta přijímá různé vstupy pro ovládání a reset, a na výstupu poskytuje PWM signál pro LED a BCD hodnoty pro zobrazení na 7-segmentových displejích (pro jednotky, desítky a stovky).
 
