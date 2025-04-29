@@ -50,6 +50,8 @@ Top-level entita – propojuje všechny komponenty, určuje směr a logiku sign�
 
 Clock Divider – převádí 100 MHz vstupní hodiny na pomalejší frekvenci vhodnou pro čítání a generování PWM
 
+Luminosity - slouží k řízení intenzity jasu LED v rozsahu 1 % až 100 %
+
 PWM Generátor – generátor vytváří signál s nastavitelným pracovním cyklem, který určuje jas LED
 
 Řízení vstupů – zpracovává stavy přepínačů a tlačítek, určuje aktivní kanál a aktualizuje hodnotu duty cycle
