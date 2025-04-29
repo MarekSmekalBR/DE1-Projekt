@@ -56,6 +56,9 @@ PWM Generátor – generátor vytváří signál s nastavitelným pracovním cyk
 
 ### Zapojení
 
+![Schéma](https://github.com/user-attachments/assets/d1574ec6-31e8-4aae-bc06-2e8b394e8f85)
+
+
 ### Simulace komponentů
 <ins>**Generátor hodinového impulzu s volitelným poměrem**<ins>  
 
