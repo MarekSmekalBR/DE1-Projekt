@@ -60,56 +60,51 @@ PWM Generátor – generátor vytváří signál s nastavitelným pracovním cyk
 
 
 ### Simulace komponentů
-<ins>**PWM_LED_tb**<ins>  
+<ins>**Generátor pulzů s volitelným poměrem**<ins>  
 
-PWM_LED_tb slouží k ověření funkce komponenty PWM_LED. Generuje hodinový signál s periodou 10 ns. Nastaví signál POS nejprve na 16, později na 5. Aktivuje reset na začátku simulace. Povolení PWM zajišťuje signál en, který je trvale aktivní. Sleduje se výstupní PWM signál při různých hodnotách jasu. Na konci simulace se test ukončí.
-
-
-
-<ins>**Luminosity_tb**<ins>
-
-Luminosity_tb ověřuje funkčnost komponenty pro řízení jasu (luminosity). Generuje hodinový signál s periodou 5 ns. Na začátku aktivuje reset a následně povolí komponentu signálem comp_en. Během simulace testuje různé kombinace stisků tlačítek up a down, kterými se mění výstupní hodnota lum. Sleduje správné chování při resetu a změnách směru jasu. Simulace končí deaktivací hodinového signálu.
+Tato komponenta generuje výstupní pulz s nastavitelnou periodou podle vstupního hodinového signálu. Pomocí vstupu switch lze zvolit mezi základní periodou PERIOD a prodlouženou periodou PERIOD * RATIO. Vnitřní čítač počítá hodiny a při dosažení zvoleného limitu vygeneruje krátký pulz. Při aktivním resetu se čítač i výstupní pulz vynulují.
 
 
 
+<ins>**Nastavení intenzity**<ins>
 
-<ins>**Medium_1_tb**<ins>
-
-Medium_1_tb ověřuje funkčnost hlavní řídicí jednotky systému medium_1, která integruje generování PWM signálu, nastavování intenzity pomocí tlačítek a zobrazování hodnot na sedmisegmentových displejích. Součástí testbenche jsou také podpůrné komponenty clock_enable a clock_enable_ratio pro generování zpomalených hodinových pulsů. Testovací scénář zahrnuje aktivaci resetu, zapnutí systému (SW), ovládání jasu pomocí tlačítek BTNL a BTNR, změnu rychlosti hodinového signálu přes SWPeriod, a průběžné sledování výstupů včetně PWM a segmentových displejů.
-
-
-
-<ins>**Segm_control_tb**<ins>
-
-Segm_control_tb slouží k ověření funkčnosti komponenty segm_control, která zajišťuje multiplexní řízení 8 sedmisegmentových LED displejů. Každému displeji (SEGM1 až SEGM8) je přiřazena specifická hodnota pro test zobrazení. Simulace začíná při deaktivovaném řízení (EN = '0'), provede reset, poté aktivuje komponentu (EN = '1') a sleduje výstupní signály segmentů (CA až CG, DP) a aktivních anod (AN). Test tak ověřuje postupné aktivování segmentů jednotlivých číslic v čase pomocí hodinového signálu.
-
-
-
-<ins>**Tb_bin2bcd**<ins>
-
-Tb_bin2bcd testuje převodník bin2bcd, který převádí 8bitové binární číslo na jeho BCD reprezentaci ve třech výstupech (BCD1, BCD10, BCD100). Na začátku proběhne reset modulu. Poté se ve smyčce testují všechna možná 8bitová čísla (0 až 255), která jsou postupně přiřazována na vstup BIN každých 20 ns. Hodinový signál generuje impulzy s periodou 1 ns. Výsledná BCD hodnota je spojena do 12bitového vektoru bcd pro případné sledování. Testbench tak ověřuje korektní převod celého rozsahu vstupních hodnot.
+Tato komponenta slouží k řízení intenzity (např. jasu LED) v rozsahu 1 až 100. Při aktivaci vstupu up se hodnota zvyšuje, při down snižuje. Výchozí hodnota je 50. Komponenta reaguje pouze při aktivním comp_en a clk náběžné hraně. Při resetu (rst) se hodnota vrací na 50. Výsledná intenzita je dostupná na výstupu lum.
 
 
 
 
-<ins>**Tb_clock_enable_ratio**<ins>
+<ins>**Generátor PWM signálu**<ins>
 
-Tb_clock_enable_ratio ověřuje funkčnost modulu clock_enable_ratio, který generuje výstupní puls s nastavitelným poměrem dělení. Pomocí generických parametrů PERIOD a RATIO je nastaveno, že puls má být generován každé 2 hodinové cykly a aktivní pouze každý druhý z nich (tedy efektivně jednou za 4 cykly při změně switch). Nejprve se vygeneruje reset, poté se sleduje výstup pulse při switch = '0' a následně i při switch = '1'. Hodinový signál má periodu 10 ns a test běží několik desítek cyklů. Testbench ověřuje správnou činnost dělení a reakci na změnu vstupního signálu switch.
-
-
-
-
-<ins>**Tb_top_level**<ins>
-
-Tb_top_level slouží k simulaci návrhu top_level ve vývojovém prostředí Vivado pomocí jazyka VHDL. Na začátku jsou deklarovány potřebné knihovny a vytvořena entita testbenche bez portů, což je běžné, protože testbench běží samostatně. V architektuře sim jsou definovány signály, které představují vstupy a výstupy modulu top_level, včetně tlačítek, hodinového signálu, přepínačů, LED diod, segmentového displeje a PWM výstupů.
-
-Pomocí komponenty uut (unit under test) se připojuje simulovaný modul top_level, který je testován. Proces clk_gen generuje hodinový signál CLK100MHZ s periodou 10 ns po dobu 5 ms. Proces stim_proc obsahuje posloupnost testovacích stimulů – například simulace stisknutí tlačítek, aktivace přepínačů a resetu. Tyto stimuly slouží k ověření chování návrhu top_level v různých situacích. Na konci procesu je simulace pozastavena příkazem wait.
+Tato komponenta vytváří PWM signál na základě vstupní hodnoty POS, která určuje šířku pulzu. Interní čítač počítá do hodnoty C_END, po jejímž dosažení se vynuluje a PWM signál se nastaví zpět na '1'. Jakmile čítač dosáhne hodnoty POS, výstupní signál se přepne na '0'. Komponenta se aktivuje pomocí vstupu en a lze ji resetovat signálem rst. Výstupní signál pwm_out poskytuje výsledný PWM výstup.
 
 
 
-<ins>**PWM_LED_tb**<ins>
+<ins>**Převodník binárního čísla na BCD**<ins>
 
-PWM_LED_tb simuluje modul PWM_LED, který generuje PWM signál. Vytváří hodinový signál, aktivuje reset, nastavuje vstupní hodnoty šířky pulzu (POS) a sleduje chování výstupu pwm_out. Simulace se po několika cyklech automaticky ukončí.
+Tato komponenta převádí 8bitové binární číslo na BCD formát (stovky, desítky a jednotky). Převod probíhá pomocí posuvného algoritmu s korekcí hodnot (tzv. "double dabble"). Vnitřní stavový automat prochází stavy start, shift, check a done, kde se postupně zpracovává vstupní číslo. Převod začíná při změně vstupu BIN a aktivním hodinovém signálu CLK. Výsledné číslo je na výstupech BCD1, BCD10 a BCD100. Při resetu (RST) se stav i výstupy vynulují.
+
+
+
+<ins>**Ovladač 7-segmentových displejů**<ins>
+
+Tato komponenta slouží k řízení šesti 7-segmentových displejů pomocí multiplexování. V každém taktu hodinového signálu aktivuje postupně jednu anodu (AN) a připojí k ní odpovídající segmentové hodnoty (CA až CG). Vstupní signály SEGM1 až SEGM8 obsahují segmentové kódy pro jednotlivé pozice. Při resetu se aktivuje první displej, a pokud je komponenta povolena (EN), rotuje aktivní anoda. Desetinná tečka (DP) je trvale vypnuta.
+
+
+
+
+<ins>**Řízení jasu pomocí PWM a 7-segmentového displeje**<ins>
+
+Tato komponenta integruje několik podkomponent pro řízení jasu LED pomocí PWM signálu a zobrazení procentuálního jasu na 7-segmentovém displeji. Hlavními součástmi jsou:
+
+luminosity – Tato komponenta řídí změny hodnoty jasu na základě vstupních tlačítek pro zvýšení a snížení hodnoty, a také pro resetování do střední hodnoty.
+
+PWM_LED – Generuje PWM signál, který řídí výkon LED diody na základě hodnoty jasu.
+
+bin2bcd – Převádí binární hodnotu jasu do formátu BCD pro zobrazení na displeji.
+
+bin2seg – Zobrazuje hodnoty BCD na 7-segmentovém displeji.
+
+Komponenta přijímá různé vstupy pro ovládání a reset, a na výstupu poskytuje PWM signál pro LED a BCD hodnoty pro zobrazení na 7-segmentových displejích (pro jednotky, desítky a stovky).
 
 
 
