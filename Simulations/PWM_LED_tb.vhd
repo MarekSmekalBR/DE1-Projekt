@@ -29,7 +29,7 @@ architecture tb of PWM_LED_tb is
 
     component PWM_LED
         generic (
-            C_END : integer := 300
+            C_END : integer := 100
         );
         port (clk     : in std_logic;
               rst     : in std_logic;
