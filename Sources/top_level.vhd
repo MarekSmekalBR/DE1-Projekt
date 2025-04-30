@@ -33,6 +33,7 @@ entity top_level is
         SW_LED       : in STD_LOGIC_VECTOR (1 downto 0); -- enable/disable LED
         LED16_G      : out STD_LOGIC; -- green LED - low intensity
         LED16_R      : out STD_LOGIC; -- red LED - high intensity
+        LED          : out STD_LOGIC_VECTOR (1 downto 0); -- LEDs for switches
         CA           : out STD_LOGIC; -- cathode signals for 7-seg display
         CB           : out STD_LOGIC; -- cathode signals for 7-seg display
         CC           : out STD_LOGIC; -- cathode signals for 7-seg display
@@ -207,7 +208,7 @@ begin
             SEG10           => sig_seg10_2,
             SEG100          => sig_seg100_2
         );
-                
+    LED     <= SW_Servo; -- switch LEDs            
     LED16_R <= '1' when SW = '1' else '0'; -- red LED when low sensitivity 
     LED16_G <= '1' when SW = '0' else '0'; -- green LED when high sensitivity 
 end Behavioral;
