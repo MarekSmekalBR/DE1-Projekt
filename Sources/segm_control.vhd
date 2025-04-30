@@ -27,18 +27,18 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity segm_control is
     Port (
-        CLK      : in STD_LOGIC; -- main clock signal
-        RST      : in STD_LOGIC; -- reset signal
-        EN       : in STD_LOGIC; -- enable component signal
+        CLK      : in STD_LOGIC; -- main clock 
+        RST      : in STD_LOGIC; -- reset
+        EN       : in STD_LOGIC; -- enable component
 
         SEGM1    : in STD_LOGIC_VECTOR (6 downto 0); -- Input segment values CG, CF, CE, CD, CC, CB, CA
-        SEGM2    : in STD_LOGIC_VECTOR (6 downto 0);
-        SEGM3    : in STD_LOGIC_VECTOR (6 downto 0);
-        SEGM4    : in STD_LOGIC_VECTOR (6 downto 0);
-        SEGM5    : in STD_LOGIC_VECTOR (6 downto 0);
-        SEGM6    : in STD_LOGIC_VECTOR (6 downto 0);
-        SEGM7    : in STD_LOGIC_VECTOR (6 downto 0);
-        SEGM8    : in STD_LOGIC_VECTOR (6 downto 0);
+        SEGM2    : in STD_LOGIC_VECTOR (6 downto 0); -- Input segment values CG, CF, CE, CD, CC, CB, CA
+        SEGM3    : in STD_LOGIC_VECTOR (6 downto 0); -- Input segment values CG, CF, CE, CD, CC, CB, CA
+        SEGM4    : in STD_LOGIC_VECTOR (6 downto 0); -- Input segment values CG, CF, CE, CD, CC, CB, CA
+        SEGM5    : in STD_LOGIC_VECTOR (6 downto 0); -- Input segment values CG, CF, CE, CD, CC, CB, CA
+        SEGM6    : in STD_LOGIC_VECTOR (6 downto 0); -- Input segment values CG, CF, CE, CD, CC, CB, CA
+        SEGM7    : in STD_LOGIC_VECTOR (6 downto 0); -- Input segment values CG, CF, CE, CD, CC, CB, CA
+        SEGM8    : in STD_LOGIC_VECTOR (6 downto 0); -- Input segment values CG, CF, CE, CD, CC, CB, CA
 
         CA       : out STD_LOGIC; -- Cathode
         CB       : out STD_LOGIC; -- Cathode
@@ -62,14 +62,16 @@ begin
         if (rising_edge(CLK)) then
             if (RST = '1') then -- on reset
                 sig_an <= b"1111_1110"; -- seet current displaying anode to the first one
+            
             elsif EN = '1' then -- on enabled
-                last := sig_an(7); -- extract MSB, shift the rest and put the bit as LSB (rotating buffer)
+                last := sig_an(7); -- extract MSB, shift the rest and put the bit as LSB
                 sig_an <= sig_an(6 downto 0) & last;
+
             end if;
         end if;
     end process;
-    
-    CA <= SEGM1(6) when sig_an = b"1111_1110" else -- Assign cathodes based on current anode
+    -- Assign cathodes based on current anode
+    CA <= SEGM1(6) when sig_an = b"1111_1110" else
           SEGM2(6) when sig_an = b"1111_1101" else
           SEGM3(6) when sig_an = b"1111_1011" else
           SEGM4(6) when sig_an = b"1111_0111" else
