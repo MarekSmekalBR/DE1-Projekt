@@ -1,4 +1,4 @@
-# **Pulse Width Modulation (PWM) for LED brightness control**
+# **Pulzní šířková modulace (PWM) pro ovládání jasu LED**
 ## **Členové**
 Jan Veverka: Zodpovědný za programování 
   
