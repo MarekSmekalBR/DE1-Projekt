@@ -1,4 +1,4 @@
-# **DE1-Projekt**
+# **Pulse Width Modulation (PWM) for LED brightness control**
 ## **Členové**
 Jan Veverka: Zodpovědný za programování 
   
