@@ -208,7 +208,7 @@ begin
             SEG10           => sig_seg10_2,
             SEG100          => sig_seg100_2
         );
-    LED     <= SW_Servo; -- switch LEDs            
+    LED     <= SW_LED; -- switch LEDs            
     LED16_R <= '1' when SW = '1' else '0'; -- red LED when low sensitivity 
     LED16_G <= '1' when SW = '0' else '0'; -- green LED when high sensitivity 
 end Behavioral;
