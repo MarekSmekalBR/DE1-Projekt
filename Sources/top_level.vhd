@@ -73,7 +73,7 @@ architecture Behavioral of top_level is
     end component;
     component medium_1 is
         port (
-            EN              : in STD_LOGIC; -- enable servo control
+            EN              : in STD_LOGIC; -- enable LED control
             BTNC            : in STD_LOGIC; -- reset luminosity to the middle
             BTNL            : in STD_LOGIC; -- turn intensity low
             BTNR            : in STD_LOGIC; -- turn intensity high
