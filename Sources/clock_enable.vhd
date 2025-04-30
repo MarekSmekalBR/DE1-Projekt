@@ -40,6 +40,7 @@ architecture Behavioral of clock_enable is
     
     signal sig_count        : std_logic_vector(bits_needed - 1 downto 0) := (others => '0'); -- internal value
     signal sig_pulse        : std_logic; -- internal out signal
+
 begin
     lum_clk_enable : process (clk) is
     begin
