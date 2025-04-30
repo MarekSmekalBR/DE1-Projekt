@@ -78,8 +78,8 @@ architecture Behavioral of top_level is
             BTNC            : in STD_LOGIC; -- reset luminosity to the middle
             BTNL            : in STD_LOGIC; -- turn intensity low
             BTNR            : in STD_LOGIC; -- turn intensity high
-            CLK_POS         : in STD_LOGIC; -- enable signal with low frequency for reading 
-            CLK_PWM_COUNTER : in STD_LOGIC; -- enable signal with high frequency for pwm counter (300*PWM frequency)
+            CLK_POS         : in STD_LOGIC; -- enable signal for reading 
+            CLK_PWM_COUNTER : in STD_LOGIC; -- enable signal for pwm counter (100 * PWM frequency)
             CLK             : in STD_LOGIC; -- main clock
             RST             : in STD_LOGIC; -- reset
             PWM             : out STD_LOGIC; -- PWM out
