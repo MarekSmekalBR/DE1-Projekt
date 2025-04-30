@@ -26,7 +26,7 @@ use ieee.numeric_std.all;
 entity medium_1 is
 port (
         EN              : in STD_LOGIC; -- enable LED control 
-        BTNC            : in STD_LOGIC; -- reset position to the middle
+        BTNC            : in STD_LOGIC; -- reset position to 50
         BTNL            : in STD_LOGIC; -- turn intensity down
         BTNR            : in STD_LOGIC; -- turn intensity up
         CLK_POS         : in STD_LOGIC; -- enable signal
