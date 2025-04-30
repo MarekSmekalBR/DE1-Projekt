@@ -82,7 +82,7 @@ Tato komponenta vytváří PWM signál na základě vstupní hodnoty *POS*, kter
 
 <ins>**Převodník binárního čísla na BCD**<ins>
 
-Tato komponenta převádí 8bitové binární číslo na BCD formát (stovky, desítky a jednotky). Převod probíhá pomocí posuvného algoritmu s korekcí hodnot (tzv. "double dabble"). Vnitřní stavový automat prochází stavy *start*, *shift*, *check* a *done*, kde se postupně zpracovává vstupní číslo. Převod začíná při změně vstupu *BIN* a aktivním hodinovém signálu *CLK*. Výsledné číslo je na výstupech *BCD1*, *BCD10* a *BCD100*. Při resetu (*RST*) se stav i výstupy vynulují.
+Tato komponenta převádí 8bitové binární číslo na BCD formát (stovky, desítky a jednotky). Převod probíhá pomocí posuvného algoritmu s korekcí hodnot. Vnitřní stavový automat prochází stavy *start*, *shift*, *check* a *done*, kde se postupně zpracovává vstupní číslo. Převod začíná při změně vstupu *BIN* a aktivním hodinovém signálu *CLK*. Výsledné číslo je na výstupech *BCD1*, *BCD10* a *BCD100*. Při resetu (*RST*) se stav i výstupy vynulují.
 
 ![Snímek obrazovky 2025-04-29 183909](https://github.com/user-attachments/assets/71553bae-5ed1-4d10-b115-7192eab396fc)
 
