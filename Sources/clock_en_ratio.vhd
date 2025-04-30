@@ -31,7 +31,7 @@ entity clock_enable_ratio is
     Port ( 
         clk     : in STD_LOGIC; -- clock 
         rst     : in STD_LOGIC; -- reset 
-        switch  : in STD_LOGIC; -- switch to enable/disable ratio*period
+        switch  : in STD_LOGIC; -- switch to enable/disable ratio * period
         pulse   : out STD_LOGIC -- output pulse
     );
 end clock_enable_ratio;
